@@ -1,7 +1,7 @@
 
 # Lire et écrire du texte dans le terminal
 
-Le fichier `stdio.h` contient des fonctions pour gérer les entrées et sorties standards (**st**an**d**ard **i**nputs and **o**utputs). Les entrées et les sorties standard, cela peut se résumer aux fichiers et au terminal (techniquement sous UNIX le terminal est un fichier aussi, mais nous verrons cela plus tard).
+Le fichier `stdio.h` est une bibliothèque en langage C qui contient des fonctions pour gérer les entrées et sorties standards (**st**an**d**ard **i**nputs and **o**utputs). Les entrées et les sorties standard, cela peut se résumer aux fichiers et au terminal (techniquement sous UNIX le terminal est un fichier aussi, mais nous verrons cela plus tard).
 
 Comme son nom l'indique, il est possible de gérer à la fois les entrées et les sorties avec cette librairie , nous allons donc pouvoir à la fois *lire* et *écrire* du texte dans le terminal et dans les fichiers.
 
