@@ -72,14 +72,11 @@ print("Bienvenue à " + ville + " !")
 print("Bienvenue à", ville, "!")
 ```
 
-Mais la façon dont fonctionne le C fait qu'il est bien plus simple d'utiliser la technique
+En réalité, la façon dont fonctionne le C fait qu'il est bien plus simple d'utiliser la technique
 des chaînes de caractères avec des `%`. Nous sommes aussi obligés de mettre une lettre après
 ces `%` parce que même si nos variables ont un type connu au moment de la compilation
-(et donc on pourrait savoir qu'un `int` doit s'afficher comme un nombre décimal, et un `char *`
-comme une chaîne de caractères, etc), cette information de type est perdue dès qu'on compile et
-donc quand notre fonction est appelée, on ne sait plus quelle variable est de quel type. En plus
-de ça, on peut choisir d'utiliser différentes représentations pour un même type : par exemple
-les nombres sont souvent affichés en base 10, mais quand on fait de l'informatique ça peut être
+(Nous pourrions donc pense que le compilateur sait qu'un `int` doit s'afficher comme un nombre décimal, et un `char *`
+comme une chaîne de caractères, etc), cette information de type est perdue au moment de la compilation. Cela signifie que lorsque notre fonction est appelée, le programme ne sait plus quelle variable est de quel type. En plus de cela, il est possible de choisir d'utiliser différentes représentations pour un même type : par exemple les nombres sont souvent affichés en base 10, mais quand on fait de l'informatique ça peut être
 utile de les afficher en binaire (avec **`%b`**) ou en héxadécimal (avec **`%x`**).
 
 Bref, cette façon un peu compliquée d'écrire un `print` est un mal nécessaire, et est parfois utile
