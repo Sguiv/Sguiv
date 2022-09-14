@@ -1,5 +1,5 @@
 
-## Lire et écrire du texte dans le terminal
+# Lire et écrire du texte dans le terminal
 
 Le fichier `stdio.h` contient des fonctions pour gérer les entrées et sorties standards (**st**an**d**ard **i**nputs and **o**utputs). Les entrées et les sorties standard, cela peut se résumer aux fichiers et au terminal (techniquement sous UNIX le terminal est un fichier aussi, mais nous verrons cela plus tard).
 
@@ -108,3 +108,22 @@ de la place en mémoire est réservée pour chaque variable. Le souci c'est que 
 celles auxquelles on peut s'attendre.
 
 Cela signifie qu'il faut toujours donner une valeur par défaut à ses variables (que ça soit pour les utiliser avec `scanf` ou pour un autre usage), car sinon votre programme peut avoir un comportement inattendu. 
+
+# Exercices
+
+## Exercice 1 :
+
+Demander à l'utilisateur de taper son âge dans la console et l'afficher
+
+## Exercice 2 :
+
+Demander à l'utilisateur de taper son nom dans la console et afficher "Bonjour **nom de l'utilisateur**"
+
+## Exercice 3 :
+
+Demander à l'utilisateur de taper son âge et afficher : 
+    -Vous êtes majeur en france et aux états-unis si l'age est supérieur ou égal à 21
+    -Vous êtes majeur en france mais pas aux états-unis si l'age compris entre 18 et 21 ans
+    -Vous êtes mineur en france et aux états-unis si l'age est inférieur à égal à 18
+
+
