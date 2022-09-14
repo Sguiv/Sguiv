@@ -123,8 +123,8 @@ Demander à l'utilisateur de taper son nom dans la console et afficher "Bonjour 
 
 Demander à l'utilisateur de taper son âge et afficher : 
 
-- Vous êtes majeur en france et aux états-unis si l'age est supérieur ou égal à 21
-- Vous êtes majeur en france mais pas aux états-unis si l'age est compris entre 18 et 21 ans
-- Vous êtes mineur en france et aux états-unis si l'age est inférieur à égal à 18
+- "Vous êtes majeur en france et aux états-unis" si l'age est supérieur ou égal à 21
+- "Vous êtes majeur en france mais pas aux états-unis" si l'age est compris entre 18 et 21 ans
+- "Vous êtes mineur en france et aux états-unis" si l'age est inférieur à égal à 18
 
 
