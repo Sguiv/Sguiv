@@ -79,12 +79,12 @@ ces `%` parce que même si nos variables ont un type connu au moment de la compi
 comme une chaîne de caractères, etc), cette information de type est perdue au moment de la compilation. Cela signifie que lorsque notre fonction est appelée, le programme ne sait plus quelle variable est de quel type. En plus de cela, il est possible de choisir d'utiliser différentes représentations pour un même type : par exemple les nombres sont souvent affichés en base 10, mais quand on fait de l'informatique ça peut être
 utile de les afficher en binaire (avec **`%b`**) ou en héxadécimal (avec **`%x`**).
 
-Bref, cette façon un peu compliquée d'écrire un `print` est un mal nécessaire, et est parfois utile
+Pour résumer, cette façon un peu compliquée d'écrire un `print` est un mal nécessaire, et est parfois utile
 quand on veut choisir une représentation différente de celle par défaut.
 
 ## Lire du texte
 
-On va maintenant voir comment utiliser `scanf` pour lire du texte tapé au clavier.
+Nous allons maintenant voir comment utiliser `scanf` pour lire du texte tapé au clavier.
 
 Cette fonction est similaire à `printf` : le premier argument est aussi une chaîne
 indiquant le format attendu, puis nous avons les variables qui correspondent à chacun des `%`.
