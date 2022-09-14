@@ -7,10 +7,9 @@ weight = 1
 illus = "illus.webp"
 +++
 
-Le fichier `stdio.h` contient des fonctions pour gérer les entrées et sorties standards (**st**an**d**ard **i**nputs and **o**utputs).7Les entrées et les sorties standard, cela peut se résumer aux fichiers et au terminal (techniquement sous UNIX le terminal est un fichier aussi, mais nous verront cela plus tard).
+Le fichier `stdio.h` contient des fonctions pour gérer les entrées et sorties standards (**st**an**d**ard **i**nputs and **o**utputs). Les entrées et les sorties standard, cela peut se résumer aux fichiers et au terminal (techniquement sous UNIX le terminal est un fichier aussi, mais nous verrons cela plus tard).
 
-Comme on peut gérer à la fois les entrées et les sorties avec ces fonctions, on va pouvoir à la fois *lire* et *écrire*
-du texte dans le terminal et dans les fichiers.
+Comme son nom l'indique, il est possible de gérer à la fois les entrées et les sorties avec cette librairie , nous allons donc pouvoir à la fois *lire* et *écrire* du texte dans le terminal et dans les fichiers.
 
 Pour utiliser les fonctions de `stdio.h`, il faut l'inclure dans notre fichier :
 
@@ -18,18 +17,18 @@ Pour utiliser les fonctions de `stdio.h`, il faut l'inclure dans notre fichier :
 #include <stdio.h>
 
 int main() {
-    // on peut utiliser les fonctions de stdio.h ici !
+    // nous pouvons utiliser les fonctions de stdio.h ici !
     return 0;
 }
 ```
 
-On va commencer par les deux fonctions qui permettent de lire et écrire dans le terminal : `printf` et `scanf`.
+Nous allons commencer par les deux fonctions qui permettent de lire et écrire dans le terminal : `printf` et `scanf`.
 
 ## Afficher du texte printf
 
-La fonction `printf` permet d'afficher du texte et des variables suivant un format défini (le **f** dans `printf` est pour « *format* »).
+La fonction `printf` permet d'afficher du texte et des variables suivant un format défini (le **f** dans `printf` est pour « *formatted* »).
 
-On va commencer par afficher du texte, sans variables au milieu. On peut juste donner une chaîne de caractère et `printf`
+Nous alons commencer par afficher du texte, sans variables au milieu. On peut juste donner une chaîne de caractère et `printf`
 l'affichera :
 
 ```c
@@ -73,15 +72,15 @@ print("Bienvenue à " + ville + " !")
 print("Bienvenue à", ville, "!")
 ```
 
-Mais la façon dont fonctionne le C fait que c'est bien plus simple d'utiliser la technique
-des chaînes de caractères avec des `%`. On est aussi obligés de mettre une lettre après
+Mais la façon dont fonctionne le C fait qu'il est bien plus simple d'utiliser la technique
+des chaînes de caractères avec des `%`. Nous sommes aussi obligés de mettre une lettre après
 ces `%` parce que même si nos variables ont un type connu au moment de la compilation
 (et donc on pourrait savoir qu'un `int` doit s'afficher comme un nombre décimal, et un `char *`
 comme une chaîne de caractères, etc), cette information de type est perdue dès qu'on compile et
 donc quand notre fonction est appelée, on ne sait plus quelle variable est de quel type. En plus
 de ça, on peut choisir d'utiliser différentes représentations pour un même type : par exemple
 les nombres sont souvent affichés en base 10, mais quand on fait de l'informatique ça peut être
-utile de les afficher en binaire (avec `%b`) ou en héxadécimal (avec `%x`).
+utile de les afficher en binaire (avec **`%b`**) ou en héxadécimal (avec **`%x`**).
 
 Bref, cette façon un peu compliquée d'écrire un `print` est un mal nécessaire, et est parfois utile
 quand on veut choisir une représentation différente de celle par défaut.
@@ -91,14 +90,13 @@ quand on veut choisir une représentation différente de celle par défaut.
 On va maintenant voir comment utiliser `scanf` pour lire du texte tapé au clavier.
 
 Cette fonction est similaire à `printf` : le premier argument est aussi une chaîne
-indiquant le format attendu, puis on a les variables qui correspondent à chacun des `%`.
+indiquant le format attendu, puis nous avons les variables qui correspondent à chacun des `%`.
 
 La différence est que `scanf` va écrire ce qui a été lu dans ces variables au lieu de les lire
 pour les afficher. Il faut donc passer des pointeurs vers ces variables, sinon leur valeur sera
 copiée pour `scanf` et elles ne pourront pas vraiment être modifiées.
 
-Ça veut aussi dire que nos variables n'ont pas spécialement besoin d'être initialisées, puisque `scanf`
-va normalement changer leur valeur de toute façon.
+Nous verrons la notion de pointeur plus tard durant cette année, pour l'instant, vous pourrez vous contenter d'admettre que le signe **&** indique l'adresse de la variable en mémoire (c'est donc un pointeur).
 
 Voici un exemple qui permet de lire un nombre au clavier :
 
@@ -118,51 +116,4 @@ de la place en mémoire est réservée pour chaque variable. Le souci c'est que 
 à d'autre choses avant, et donc les valeurs par défaut des variables non-initialisées ne sont pas forcément
 celles auxquelles on peut s'attendre.
 
-Ce programme par exemple, fait une démonstration très simple de comment une faille de sécurité
-peut arriver à cause de ce problème :
-
-```c
-#include <stdio.h>
-
-void a() {
-    int x = 1234;
-}
-
-void b() {
-    int y;
-    printf("Tapez le code secret : ");
-    scanf("%d", &y);
-    if (y == 1234) {
-        printf("Code secret correct.\n");
-    } else {
-        printf("Code secret incorrect.\n");
-    }
-}
-
-int main() {
-    a();
-    b();
-    return 0;
-}
-```
-
-Quand on le compile avec `clang faille.c` et qu'on l'exécute, si on tape quelque chose
-qui ne sera pas reconnu comme du texte par `scanf` quand on nous demande le code secret,
-`y` aura une valeur non-initialisée. Le souci est que dans ce cas précis, la mémoire qui correspond
-à `y` dans la fonction `b` est celle qui correspondait à `x` dans la fonction `a`, soit 1234, donc le code
-secret est correct si on tape n'importe quoi !
-
-Bref, cet exemple très long est là pour dire : il vaut mieux donner une valeur par défaut à ses
-variables (que ça soit pour les utiliser avec `scanf` ou pas d'ailleurs), sinon notre programme
-peut faire des choses auxquelles on ne s'attend pas.
-
-Un autre cas où on peut avoir des formats qui ne correspondent pas avec ce qui a été tapé est quand 
-on met plus que juste un `%` et une lettre. Par exemple, on peut demander de taper `x = ` avant de
-taper un nombre avec :
-
-```c
-int x = 0;
-scanf("x = %d", &x);
-```
-
-Mais si on ne tape pas `x = ` avant, `x` ne sera pas modifié.
+Cela signifie qu'il faut toujours donner une valeur par défaut à ses variables (que ça soit pour les utiliser avec `scanf` ou pour un autre usage), car sinon votre programme peut avoir un comportement inattendu. 
