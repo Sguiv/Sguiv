@@ -24,7 +24,7 @@ while (/* Condition à évaluer */)
   /* en boucle tant que la         */
   /* la condition est vraie.       */
 }
-```c
+```
 
 Le bloc d'instructions à exécuter est borné par des accolades.
 Néanmoins, s'il s'agit de n'exécuter qu'une seule instruction, les
@@ -42,7 +42,7 @@ while (compteur < 10)
   printf("Compteur : %d\n", compteur);
   compteur++;
 }
-```c
+```
 
 Il est important de noter que si l'incrémentation de la variable
 `compteur` n'est pas effectuée, la condition de la boucle `while` qui en
@@ -64,7 +64,7 @@ do
   /* en boucle tant que la         */
   /* la condition est vraie.       */
 } while (/* Condition à évaluer */);
-```c
+```
 
 
 Il existe également un risque de boucle infinie si la condition reste
@@ -81,7 +81,7 @@ do
   printf("Compteur : %d\n", compteur);
   compteur++;
 } while (compteur < 10);
-```c
+```
 
 ## Boucle `for`
 
@@ -101,7 +101,7 @@ for (/* Initialisation*/;
   /* en boucle tant que la         */
   /* la condition est vraie.       */
 }
-```c
+```
 
 L'initialisation consiste à fixer la valeur initiale d'une variable
 utilisée dans le contrôle de la boucle `for`. Le second champ concerne
@@ -118,7 +118,7 @@ int i;
   
 for (i = 0; i <= 10; i++)
   printf("Valeur : %d\n", i);  
-```c
+```
 
 D'un point de vue algorithmique, la boucle `for` se comporte de façon
 similaire à la boucle `while`.
@@ -135,6 +135,6 @@ int i, j;
 for (i = 0; i < 10; i++)
   for (j = 0; j < 10; j++)
     printf("Addition : %d\n", i + j);  
-```c
+```
 ## Exercices
 
