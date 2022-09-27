@@ -1,4 +1,4 @@
-## Les structures itératives (boucles)
+# Les structures itératives (boucles)
 Le langage C présente
 plusieurs types de structures itératives, c'est-à-dire, des structures
 de contrôle permettant de réaliser des traîtements cycliques en boucle.
@@ -10,7 +10,7 @@ n'entrera pas dans une boucle infinie. Tout comme les structures
 conditionnelles, les structures itératives utilisent les opérateurs
 relationnels et logiques afin d'exprimer la condition à évaluer.**
 
-# Boucle `while` 
+## Boucle `while` 
 
 La boucle `while` existe dans la plupart des langages de programmation.
 Elle consiste à tester une condition et à exécuter de manière itérative
@@ -49,7 +49,7 @@ Il est important de noter que si l'incrémentation de la variable
 dépend ne pourra jamais être fausse et le programme entrera dans une
 boucle infinie.
 
-# Boucle `do...while` {#boucle-do...while .unnumbered}
+## Boucle `do...while`
 
 La boucle `do..while` se distingue de la boucle `while` par le fait que
 la condition est évaluée au terme du traitement du bloc d'instructions.
@@ -83,7 +83,7 @@ do
 } while (compteur < 10);
 ```
 
-# Boucle `for`
+## Boucle `for`
 
 La boucle `for` est une structure très couramment utilisée dans les
 programmes écrits en langage C. Elle est généralement mise en œuvre
@@ -123,7 +123,7 @@ for (i = 0; i <= 10; i++)
 D'un point de vue algorithmique, la boucle `for` se comporte de façon
 similaire à la boucle `while`.
 
-# Imbrication de boucles 
+## Imbrication de boucles 
 
 Dans le cadre de traîtements particuliers, il est parfois nécessaire
 d'imbriquer plusieurs boucles `for`. Le code suivant montre un cas
