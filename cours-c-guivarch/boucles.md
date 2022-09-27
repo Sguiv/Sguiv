@@ -1,4 +1,4 @@
-
+## Les structures itératives (boucles)
 Le langage C présente
 plusieurs types de structures itératives, c'est-à-dire, des structures
 de contrôle permettant de réaliser des traîtements cycliques en boucle.
