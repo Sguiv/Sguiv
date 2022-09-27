@@ -8,7 +8,7 @@ d'être rigoureux dans l'écriture de la condition afin de s'assurer
 qu'elle ne restera pas toujours vraie et que l'exécution du programme
 n'entrera pas dans une boucle infinie. Tout comme les structures
 conditionnelles, les structures itératives utilisent les opérateurs
-relationnels et logiques afin d'exprimer la condition à évaluer.**
+relationnels et logiques afin d'exprimer la condition à évaluer.
 
 ## Boucle `while` 
 
@@ -136,3 +136,5 @@ for (i = 0; i < 10; i++)
   for (j = 0; j < 10; j++)
     printf("Addition : %d\n", i + j);  
 ```
+## Exercices
+
