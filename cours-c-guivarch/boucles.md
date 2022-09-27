@@ -17,14 +17,14 @@ Elle consiste à tester une condition et à exécuter de manière itérative
 un bloc d'instructions tant que cette condition reste vraie. Sa syntaxe
 générale est la suivante :
 
-``` 
+```c 
 while (/* Condition à évaluer */)
 {
   /* Suite d'intructions à traiter */
   /* en boucle tant que la         */
   /* la condition est vraie.       */
 }
-```
+```c
 
 Le bloc d'instructions à exécuter est borné par des accolades.
 Néanmoins, s'il s'agit de n'exécuter qu'une seule instruction, les
@@ -34,7 +34,7 @@ accolades sont facultatives.
 Le code ci-dessous montre un exemple d'utilisation d'une boucle `while`
 :
 
-``` 
+```c 
 int compteur = 0;
   
 while (compteur < 10)
@@ -42,7 +42,7 @@ while (compteur < 10)
   printf("Compteur : %d\n", compteur);
   compteur++;
 }
-```
+```c
 
 Il est important de noter que si l'incrémentation de la variable
 `compteur` n'est pas effectuée, la condition de la boucle `while` qui en
@@ -57,14 +57,14 @@ Ainsi, et même si la condition est initialement fausse, le bloc
 d'instructions est au minimum exécuté une fois. La syntaxe générale de
 la boucle `do...while` est la suivante :
 
-``` 
+```c 
 do
 {
   /* Suite d'intructions à traiter */
   /* en boucle tant que la         */
   /* la condition est vraie.       */
 } while (/* Condition à évaluer */);
-```
+```c
 
 
 Il existe également un risque de boucle infinie si la condition reste
@@ -73,7 +73,7 @@ systématiquement vraie.
 Le code ci-dessous montre un exemple d'utilisation d'une boucle `while`
 :
 
-``` 
+```c 
 int compteur = 0;
   
 do
@@ -81,7 +81,7 @@ do
   printf("Compteur : %d\n", compteur);
   compteur++;
 } while (compteur < 10);
-```
+```c
 
 ## Boucle `for`
 
@@ -92,7 +92,7 @@ nombre de fois préalablement déterminé. Sa syntaxe générale prend en
 compte trois champs distincts séparés par le caractère `’;’`. Elle est
 la suivante :
 
-``` 
+```c 
 for (/* Initialisation*/;
      /* Condition */;
      /* Itération de contrôle */)
@@ -101,7 +101,7 @@ for (/* Initialisation*/;
   /* en boucle tant que la         */
   /* la condition est vraie.       */
 }
-```
+```c
 
 L'initialisation consiste à fixer la valeur initiale d'une variable
 utilisée dans le contrôle de la boucle `for`. Le second champ concerne
@@ -113,12 +113,12 @@ incrémentation ou d'une décrémentation.
 Le code ci-dessous présente un exemple classique d'implémentation d'une
 boucle `for` :
 
-``` 
+```c 
 int i;
   
 for (i = 0; i <= 10; i++)
   printf("Valeur : %d\n", i);  
-```
+```c
 
 D'un point de vue algorithmique, la boucle `for` se comporte de façon
 similaire à la boucle `while`.
@@ -129,12 +129,12 @@ Dans le cadre de traîtements particuliers, il est parfois nécessaire
 d'imbriquer plusieurs boucles `for`. Le code suivant montre un cas
 d'application :
 
-``` 
+```c 
 int i, j;
   
 for (i = 0; i < 10; i++)
   for (j = 0; j < 10; j++)
     printf("Addition : %d\n", i + j);  
-```
+```c
 ## Exercices
 
