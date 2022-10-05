@@ -138,3 +138,16 @@ for (i = 0; i < 10; i++)
 ```
 ## Exercices
 
+### Exercice 4 Boucle While
+Reprendre l'exercice 3 (Exercice sur les switch/case) et rajouter : 
+ - Une boucle while qui s'arrête si l'utilisateur tape 'Q' ou 'q'
+
+### Exercice 5 Boucle For
+
+En utilisant une boucle for, réaliser le programme fonctionnant ainsi : 
+
+```
+Taper un nombre '6'
+Taper une puissance '4'
+Le résultat de '6' à la puissance '4' est 1296
+```
