@@ -2,7 +2,7 @@
 
 ## Exercice 1
 
-./calculRectangle 12 3
+``` ./calculRectangle 12 3 ``` 
 
 Donne : 
 
